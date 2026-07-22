@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- TEMEL SEO (Google için Arama Motoru Optimizasyonu) -->
+    <meta name="description" content="Görkem Ediz Özpekmezci - Yazılım Mühendisliği öğrencisi. Python, C/C# ile nesne yönelimli programlama, siber güvenlik ve görüntü işleme projeleri geliştiriyorum.">
+    <meta name="keywords" content="Görkem Ediz Özpekmezci, Yazılım Mühendisi, Software Engineer, Python, C#, Siber Güvenlik, CV, Portfolyo, Samsun Üniversitesi">
+    <meta name="author" content="Görkem Ediz Özpekmezci">
+    <meta name="robots" content="index, follow"> <!-- Google'ın siteyi indekslemesine izin verir -->
+    
+    <title>Görkem Ediz Özpekmezci | Yazılım Mühendisi</title>
+    
+    <!-- FAVICON (Tarayıcı Sekmesi İkonu) -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- OPEN GRAPH / SOSYAL MEDYA PAYLAŞIM ETİKETLERİ (LinkedIn, WhatsApp vb. için önizleme) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gorkemedizozpekmezci-del.github.io/portfolyo/"> <!-- Github Pages linkini buraya yazacaksın -->
+    <meta property="og:title" content="Görkem Ediz Özpekmezci | Yazılım Mühendisi Portfolyosu">
+    <meta property="og:description" content="Yazılım Mühendisliği 3. sınıf öğrencisi. Siber güvenlik, veri analizi ve projelerime göz atın.">
+    <meta property="og:image" content="https://gorkemedizozpekmezci-del.github.io/portfolyo/og-image.jpg"> <!-- Link paylaşıldığında çıkacak kapak fotoğrafı -->
+
+    <!-- TWITTER KART ETİKETLERİ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Görkem Ediz Özpekmezci | Yazılım Mühendisi">
+    <meta name="twitter:description" content="Yazılım Mühendisliği öğrencisi portfolyo sitesi.">
+    <meta name="twitter:image" content="https://gorkemedizozpekmezci-del.github.io/portfolyo/og-image.jpg">
+
+    <!-- CSS Dosyaları -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Görkem Ediz</div>
+            <ul class="nav-links">
+                <li><a href="#anasayfa" class="lang-text" data-key="menu_anasayfa">Anasayfa</a></li>
+                <li><a href="#hakkimda" class="lang-text" data-key="menu_hakkimda">Hakkımda</a></li>
+                <li><a href="#deneyim" class="lang-text" data-key="menu_deneyim">Eğitim & Deneyim</a></li>
+                <li><a href="#yetenekler" class="lang-text" data-key="menu_yetenekler">Yetenekler</a></li>
+                <li><a href="#projeler" class="lang-text" data-key="menu_projeler">Projeler</a></li>
+            </ul>
+            <div class="controls">
+                <button id="lang-btn">EN</button>
+                <button id="theme-btn">☀️</button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="anasayfa" class="hero-section">
+        <canvas id="blackhole-canvas"></canvas>
+        <div class="hero-content">
+            <p class="status-text lang-text" data-key="hero_durum">Proje, Eğitim ve staj tekliflerine açığım</p>
+            <h1 class="hero-title">Görkem Ediz Özpekmezci</h1>
+            <div class="hero-buttons">
+                <a href="#" id="open-cv-btn" class="btn primary-btn lang-text" data-key="hero_cv_buton">Özgeçmişimi Görüntüle</a>
+                <a href="#iletisim" class="btn secondary-btn lang-text" data-key="hero_iletisim_buton">Bana Ulaşın</a>
+            </div>
+            <div class="hero-location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="lang-text" data-key="hero_konum">İstanbul/Esenyurt - Samsun/Atakum</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVEAL SINIFI EKLENDİ -->
+    <section id="hakkimda" class="section reveal">
+        <div class="about-container large">
+            <div class="about-image-large">
+                <img src="foto.jpg" alt="Profil Fotoğrafı">
+            </div>
+            <div class="about-text-large">
+                <h2 class="lang-text" data-key="hakkimda_baslik">Hakkımda</h2>
+                <p class="lang-text" data-key="hakkimda_metin">
+                   Samsun Üniversitesi Yazılım Mühendisliği 3. sınıf öğrencisiyim. Python ve C/C# dilleriyle nesne yönelimli programlama, veri analizi ve görüntü işleme üzerine projeler geliştiriyorum. Analitik düşünen, öğrenmeye açık ve ekip çalışmasına yatkın bir mühendis adayı olarak kendimi her geçen gün geliştirmeye devam ediyorum.
+                </p>
+                <div class="badges large-badges">
+                    <span class="badge education"><i class="fas fa-graduation-cap"></i> <span class="lang-text" data-key="rozet_uni">Samsun Üni. (Devam Ediyor)</span></span>
+                    <span class="badge interest"><i class="fas fa-shield-alt"></i> <span class="lang-text" data-key="rozet_siber">Siber Güvenlik</span></span>
+                    <span class="badge interest"><i class="fas fa-bug"></i> <span class="lang-text" data-key="rozet_zafiyet">Zafiyet Analizi</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="deneyim" class="section reveal">
+        <h2 class="section-title lang-text" data-key="deneyim_baslik">Eğitim & Deneyim</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date lang-text" data-key="zaman_uni_tarih">2024 - Günümüz</span>
+                    <h3 class="lang-text" data-key="zaman_uni_isim">Samsun Üniversitesi</h3>
+                    <p class="lang-text" data-key="zaman_uni_bolum">Yazılım Mühendisliği (Lisans)</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date lang-text" data-key="zaman_lise_tarih">2018 - 2022</span>
+                    <h3 class="lang-text" data-key="zaman_lise_isim">Bahçelievler Anadolu Lisesi</h3>
+                    <p class="lang-text" data-key="zaman_lise_bolum">Lise Eğitimi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="yetenekler" class="section reveal">
+        <h2 class="section-title lang-text" data-key="yetenekler_baslik">Yetenekler & Araçlar</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3 class="lang-text" data-key="yetenek_programlama">Programlama</h3>
+                <div class="tags"><span>Python</span><span>C</span><span>C++</span><span>C#</span></div>
+            </div>
+            <div class="skill-card">
+                <h3 class="lang-text" data-key="yetenek_odak">Odak Alanları</h3>
+                <div class="tags"><span>Siber Güvenlik</span><span>Sistem Güvenliği</span><span>OOP</span></div>
+            </div>
+            <div class="skill-card">
+                <h3 class="lang-text" data-key="yetenek_teknoloji">Teknolojiler</h3>
+                <div class="tags"><span>Git / GitHub</span><span>Veri İşleme</span><span>Görüntü İşleme</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sertifikalar" class="section reveal" style="margin-top: -30px;">
+        <h2 class="section-title lang-text" data-key="sertifika_baslik">Sertifikalar & Başarılar</h2>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <i class="fas fa-certificate cert-icon"></i>
+                <h4 class="lang-text" data-key="cert_1">BTK Akademi - Siber Güvenliğe Giriş</h4>
+            </div>
+            <div class="cert-card">
+                <i class="fas fa-trophy cert-icon"></i>
+                <h4 class="lang-text" data-key="cert_2">TryHackMe - Temel Zafiyet Analizi</h4>
+            </div>
+            <div class="cert-card">
+                <i class="fas fa-award cert-icon"></i>
+                <h4 class="lang-text" data-key="cert_3">Udemy - İleri Seviye Python</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="projeler" class="section reveal">
+        <h2 class="section-title lang-text" data-key="projeler_baslik">Projelerim</h2>
+        <div class="projects-grid detailed-grid">
+            <div class="project-card detailed">
+                <div class="project-img-container">
+                    <img src="https://via.placeholder.com/400x200" alt="Proje 1 Resmi" class="project-img">
+                </div>
+                <div class="project-content">
+                    <h3 class="lang-text" data-key="proje1_baslik">Zafiyet Tarama Aracı</h3>
+                    <p class="lang-text" data-key="proje1_metin">Ağ üzerindeki temel güvenlik açıklarını tespit eden, Python tabanlı hafif bir tarama otomasyon aracı.</p>
+                    <div class="tags project-tags"><span>Python</span><span>Nmap</span><span>Cyber Security</span></div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="btn secondary-btn small-btn lang-text" data-key="btn_github"><i class="fab fa-github"></i> Kaynak Kod</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card detailed">
+                <div class="project-img-container">
+                    <img src="https://via.placeholder.com/400x200" alt="Proje 2 Resmi" class="project-img">
+                </div>
+                <div class="project-content">
+                    <h3 class="lang-text" data-key="proje2_baslik">Görüntü İşleme ile Nesne Takibi</h3>
+                    <p class="lang-text" data-key="proje2_metin">Kamera üzerinden gerçek zamanlı renk ve nesne tespiti yaparak koordinat takibi sağlayan yazılım.</p>
+                    <div class="tags project-tags"><span>C++</span><span>OpenCV</span><span>OOP</span></div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="btn secondary-btn small-btn lang-text" data-key="btn_github"><i class="fab fa-github"></i> Kaynak Kod</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="iletisim" class="section reveal">
+        <h2 class="section-title lang-text" data-key="iletisim_baslik">Bana Ulaşın</h2>
+        <div class="contact-container">
+            <form action="https://formspree.io/f/mvzebbbw" method="POST" class="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" required placeholder="İsim Soyisim" class="lang-placeholder" data-key="form_isim">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" required placeholder="E-posta Adresiniz" class="lang-placeholder" data-key="form_eposta">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="subject" required placeholder="Konu" class="lang-placeholder" data-key="form_konu">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" required placeholder="Mesajınız..." class="lang-placeholder" data-key="form_mesaj"></textarea>
+                </div>
+                <button type="submit" class="submit-btn lang-text" data-key="form_gonder">Mesaj Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- YENİ: YUKARI ÇIK BUTONU -->
+    <button id="scrollTopBtn" class="scroll-top-btn" title="Yukarı Çık">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div id="cv-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-cv-btn">&times;</span>
+            <h2 class="lang-text" data-key="modal_cv_baslik" style="color: var(--primary); text-align: center; margin-bottom: 10px;">Özgeçmişim</h2>
+            <div class="modal-actions" style="margin-bottom: 20px;">
+                <a href="cv.pdf" class="btn primary-btn lang-text" data-key="modal_indir_buton" download>Dosyayı İndir</a>
+            </div>
+            <iframe src="cv.pdf" width="100%" height="500px" style="border: 1px solid var(--border); border-radius: 10px;"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/gorkemedizozpekmezci-del" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/g%C3%B6rkem-ediz-%C3%B6zpekmezci-748335357/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
