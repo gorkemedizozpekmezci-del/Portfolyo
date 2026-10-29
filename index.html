@@ -3,228 +3,464 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- TEMEL SEO (Google için Arama Motoru Optimizasyonu) -->
-    <meta name="description" content="Görkem Ediz Özpekmezci - Yazılım Mühendisliği öğrencisi. Python, C/C# ile nesne yönelimli programlama, siber güvenlik ve görüntü işleme projeleri geliştiriyorum.">
-    <meta name="keywords" content="Görkem Ediz Özpekmezci, Yazılım Mühendisi, Software Engineer, Python, C#, Siber Güvenlik, CV, Portfolyo, Samsun Üniversitesi">
+
+    <!-- TEMEL SEO -->
+    <meta name="description" content="Görkem Ediz Özpekmezci - Samsun Üniversitesi Yazılım Mühendisliği 3. sınıf öğrencisi. Siber güvenlik, makine öğrenmesi, görüntü işleme ve web geliştirme projeleri.">
+    <meta name="keywords" content="Görkem Ediz Özpekmezci, Yazılım Mühendisliği, Siber Güvenlik, Makine Öğrenmesi, Python, C#, Portfolyo, Samsun Üniversitesi">
     <meta name="author" content="Görkem Ediz Özpekmezci">
-    <meta name="robots" content="index, follow"> <!-- Google'ın siteyi indekslemesine izin verir -->
-    
-    <title>Görkem Ediz Özpekmezci | Yazılım Mühendisi</title>
-    
-    <!-- FAVICON (Tarayıcı Sekmesi İkonu) -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#070b14">
 
-    <!-- OPEN GRAPH / SOSYAL MEDYA PAYLAŞIM ETİKETLERİ (LinkedIn, WhatsApp vb. için önizleme) -->
+    <title>Görkem Ediz Özpekmezci | Yazılım Mühendisliği Öğrencisi</title>
+
+    <!-- FAVICON (dosya gerektirmeyen SVG ikon) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23070b14'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='28' fill='%2338bdf8'%3EGE%3C/text%3E%3C/svg%3E">
+
+    <!-- OPEN GRAPH (LinkedIn, WhatsApp önizlemesi) -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gorkemedizozpekmezci-del.github.io/portfolyo/"> <!-- Github Pages linkini buraya yazacaksın -->
-    <meta property="og:title" content="Görkem Ediz Özpekmezci | Yazılım Mühendisi Portfolyosu">
-    <meta property="og:description" content="Yazılım Mühendisliği 3. sınıf öğrencisi. Siber güvenlik, veri analizi ve projelerime göz atın.">
-    <meta property="og:image" content="https://gorkemedizozpekmezci-del.github.io/portfolyo/og-image.jpg"> <!-- Link paylaşıldığında çıkacak kapak fotoğrafı -->
-
-    <!-- TWITTER KART ETİKETLERİ -->
+    <meta property="og:url" content="https://gorkemedizozpekmezci-del.github.io/Portfolyo/">
+    <meta property="og:title" content="Görkem Ediz Özpekmezci | Yazılım Mühendisliği Öğrencisi">
+    <meta property="og:description" content="Siber güvenlik, makine öğrenmesi ve web geliştirme projelerim.">
+    <meta property="og:image" content="https://gorkemedizozpekmezci-del.github.io/Portfolyo/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Görkem Ediz Özpekmezci | Yazılım Mühendisi">
-    <meta name="twitter:description" content="Yazılım Mühendisliği öğrencisi portfolyo sitesi.">
-    <meta name="twitter:image" content="https://gorkemedizozpekmezci-del.github.io/portfolyo/og-image.jpg">
+    <meta name="twitter:title" content="Görkem Ediz Özpekmezci | Yazılım Mühendisliği Öğrencisi">
+    <meta name="twitter:description" content="Siber güvenlik, makine öğrenmesi ve web geliştirme projelerim.">
+    <meta name="twitter:image" content="https://gorkemedizozpekmezci-del.github.io/Portfolyo/og-image.png">
 
-    <!-- CSS Dosyaları -->
-    <link rel="stylesheet" href="style.css">
+    <!-- FONTLAR VE İKONLAR -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Kayıtlı tema tercihini sayfa çizilmeden önce uygula (yanıp sönmeyi önler) -->
+    <script>
+        try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+    </script>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">Görkem Ediz</div>
-            <ul class="nav-links">
-                <li><a href="#anasayfa" class="lang-text" data-key="menu_anasayfa">Anasayfa</a></li>
+    <!-- =================== NAVBAR =================== -->
+    <header id="site-header">
+        <nav class="container nav">
+            <a href="#anasayfa" class="logo" aria-label="Anasayfa">
+                <span class="logo-mark">GE</span>
+                <span class="logo-text">Görkem Ediz</span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#hakkimda" class="lang-text" data-key="menu_hakkimda">Hakkımda</a></li>
-                <li><a href="#deneyim" class="lang-text" data-key="menu_deneyim">Eğitim & Deneyim</a></li>
+                <li><a href="#egitim" class="lang-text" data-key="menu_egitim">Eğitim</a></li>
                 <li><a href="#yetenekler" class="lang-text" data-key="menu_yetenekler">Yetenekler</a></li>
                 <li><a href="#projeler" class="lang-text" data-key="menu_projeler">Projeler</a></li>
+                <li><a href="#iletisim" class="lang-text" data-key="menu_iletisim">İletişim</a></li>
             </ul>
+
             <div class="controls">
-                <button id="lang-btn">EN</button>
-                <button id="theme-btn">☀️</button>
+                <button id="lang-btn" class="icon-btn" aria-label="Dili değiştir">EN</button>
+                <button id="theme-btn" class="icon-btn" aria-label="Temayı değiştir"><i class="fas fa-sun"></i></button>
+                <button id="menu-btn" class="icon-btn menu-btn" aria-label="Menüyü aç" aria-expanded="false"><i class="fas fa-bars"></i></button>
             </div>
         </nav>
     </header>
 
-    <section id="anasayfa" class="hero-section">
-        <canvas id="blackhole-canvas"></canvas>
-        <div class="hero-content">
-            <p class="status-text lang-text" data-key="hero_durum">Proje, Eğitim ve staj tekliflerine açığım</p>
-            <h1 class="hero-title">Görkem Ediz Özpekmezci</h1>
-            <div class="hero-buttons">
-                <a href="#" id="open-cv-btn" class="btn primary-btn lang-text" data-key="hero_cv_buton">Özgeçmişimi Görüntüle</a>
-                <a href="#iletisim" class="btn secondary-btn lang-text" data-key="hero_iletisim_buton">Bana Ulaşın</a>
-            </div>
-            <div class="hero-location">
-                <i class="fas fa-map-marker-alt"></i>
-                <span class="lang-text" data-key="hero_konum">İstanbul/Esenyurt - Samsun/Atakum</span>
-            </div>
-        </div>
-    </section>
+    <main>
+        <!-- =================== HERO =================== -->
+        <section id="anasayfa" class="hero">
+            <canvas id="blackhole-canvas" aria-hidden="true"></canvas>
+            <div class="hero-glow" aria-hidden="true"></div>
 
-    <!-- REVEAL SINIFI EKLENDİ -->
-    <section id="hakkimda" class="section reveal">
-        <div class="about-container large">
-            <div class="about-image-large">
-                <img src="foto.jpg" alt="Profil Fotoğrafı">
-            </div>
-            <div class="about-text-large">
-                <h2 class="lang-text" data-key="hakkimda_baslik">Hakkımda</h2>
-                <p class="lang-text" data-key="hakkimda_metin">
-                   Samsun Üniversitesi Yazılım Mühendisliği 3. sınıf öğrencisiyim. Python ve C/C# dilleriyle nesne yönelimli programlama, veri analizi ve görüntü işleme üzerine projeler geliştiriyorum. Analitik düşünen, öğrenmeye açık ve ekip çalışmasına yatkın bir mühendis adayı olarak kendimi her geçen gün geliştirmeye devam ediyorum.
+            <div class="container hero-content">
+                <p class="status-pill">
+                    <span class="pulse-dot"></span>
+                    <span class="lang-text" data-key="hero_durum">Staj ve proje fırsatlarına açığım</span>
                 </p>
-                <div class="badges large-badges">
-                    <span class="badge education"><i class="fas fa-graduation-cap"></i> <span class="lang-text" data-key="rozet_uni">Samsun Üni. (Devam Ediyor)</span></span>
-                    <span class="badge interest"><i class="fas fa-shield-alt"></i> <span class="lang-text" data-key="rozet_siber">Siber Güvenlik</span></span>
-                    <span class="badge interest"><i class="fas fa-bug"></i> <span class="lang-text" data-key="rozet_zafiyet">Zafiyet Analizi</span></span>
+
+                <h1 class="hero-title">Görkem Ediz<br><span class="gradient-text">Özpekmezci</span></h1>
+
+                <p class="hero-role mono">
+                    <span class="lang-text" data-key="hero_rol">Yazılım Mühendisliği Öğrencisi</span>
+                    <span class="sep">//</span>
+                    <span id="typed-text"></span><span class="caret">_</span>
+                </p>
+
+                <p class="hero-lead lang-text" data-key="hero_ozet">Siber güvenlik ve yapay zekâ odağında; fikirden çalışan ürüne kadar uçtan uca yazılım geliştiriyorum.</p>
+
+                <div class="hero-buttons">
+                    <a href="#projeler" class="btn btn-primary">
+                        <span class="lang-text" data-key="hero_proje_buton">Projelerimi Gör</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#" id="open-cv-btn" class="btn btn-ghost">
+                        <i class="fas fa-file-lines"></i>
+                        <span class="lang-text" data-key="hero_cv_buton">Özgeçmiş</span>
+                    </a>
+                </div>
+
+                <div class="hero-meta">
+                    <span><i class="fas fa-location-dot"></i> <span class="lang-text" data-key="hero_konum">İstanbul · Samsun, Türkiye</span></span>
+                    <a href="https://github.com/gorkemedizozpekmezci-del" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/g%C3%B6rkem-ediz-%C3%B6zpekmezci-748335357/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="deneyim" class="section reveal">
-        <h2 class="section-title lang-text" data-key="deneyim_baslik">Eğitim & Deneyim</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date lang-text" data-key="zaman_uni_tarih">2024 - Günümüz</span>
-                    <h3 class="lang-text" data-key="zaman_uni_isim">Samsun Üniversitesi</h3>
-                    <p class="lang-text" data-key="zaman_uni_bolum">Yazılım Mühendisliği (Lisans)</p>
+            <a href="#hakkimda" class="scroll-hint" aria-label="Aşağı kaydır"><i class="fas fa-chevron-down"></i></a>
+        </section>
+
+        <!-- =================== HAKKIMDA =================== -->
+        <section id="hakkimda" class="section container reveal">
+            <div class="section-head">
+                <span class="eyebrow mono">01</span>
+                <h2 class="section-title lang-text" data-key="hakkimda_baslik">Hakkımda</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-photo">
+                    <img src="foto.jpg" alt="Görkem Ediz Özpekmezci" loading="lazy">
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date lang-text" data-key="zaman_lise_tarih">2018 - 2022</span>
-                    <h3 class="lang-text" data-key="zaman_lise_isim">Bahçelievler Anadolu Lisesi</h3>
-                    <p class="lang-text" data-key="zaman_lise_bolum">Lise Eğitimi</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="yetenekler" class="section reveal">
-        <h2 class="section-title lang-text" data-key="yetenekler_baslik">Yetenekler & Araçlar</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3 class="lang-text" data-key="yetenek_programlama">Programlama</h3>
-                <div class="tags"><span>Python</span><span>C</span><span>C++</span><span>C#</span></div>
-            </div>
-            <div class="skill-card">
-                <h3 class="lang-text" data-key="yetenek_odak">Odak Alanları</h3>
-                <div class="tags"><span>Siber Güvenlik</span><span>Sistem Güvenliği</span><span>OOP</span></div>
-            </div>
-            <div class="skill-card">
-                <h3 class="lang-text" data-key="yetenek_teknoloji">Teknolojiler</h3>
-                <div class="tags"><span>Git / GitHub</span><span>Veri İşleme</span><span>Görüntü İşleme</span></div>
-            </div>
-        </div>
-    </section>
+                <div class="about-body">
+                    <p class="lead lang-text" data-key="hakkimda_metin1">Samsun Üniversitesi Yazılım Mühendisliği 3. sınıf öğrencisiyim. Siber güvenliğe ilgi duyuyor; güvenlik açıkları, sistem güvenliği ve makine öğrenmesiyle tehdit tespiti üzerine çalışıyorum.</p>
+                    <p class="lang-text" data-key="hakkimda_metin2">Python, C/C# ve JavaScript ile makine öğrenmesi, görüntü işleme, masaüstü araçları ve canlıya alınmış web uygulamaları geliştirdim. Projelerimi GitHub'da açık kaynak olarak yayımlıyor, fikirden çalışan ürüne kadar uçtan uca geliştirmeyi seviyorum. Staj ve ekip projelerinde sorumluluk almaya hazırım.</p>
 
-    <section id="sertifikalar" class="section reveal" style="margin-top: -30px;">
-        <h2 class="section-title lang-text" data-key="sertifika_baslik">Sertifikalar & Başarılar</h2>
-        <div class="cert-grid">
-            <div class="cert-card">
-                <i class="fas fa-certificate cert-icon"></i>
-                <h4 class="lang-text" data-key="cert_1">BTK Akademi - Siber Güvenliğe Giriş</h4>
-            </div>
-            <div class="cert-card">
-                <i class="fas fa-trophy cert-icon"></i>
-                <h4 class="lang-text" data-key="cert_2">TryHackMe - Temel Zafiyet Analizi</h4>
-            </div>
-            <div class="cert-card">
-                <i class="fas fa-award cert-icon"></i>
-                <h4 class="lang-text" data-key="cert_3">Udemy - İleri Seviye Python</h4>
-            </div>
-        </div>
-    </section>
+                    <div class="stats">
+                        <div class="stat">
+                            <strong>3.</strong>
+                            <span class="lang-text" data-key="stat_sinif">sınıf · Yazılım Müh.</span>
+                        </div>
+                        <div class="stat">
+                            <strong>10+</strong>
+                            <span class="lang-text" data-key="stat_proje">proje</span>
+                        </div>
+                        <div class="stat">
+                            <strong>6</strong>
+                            <span class="lang-text" data-key="stat_dil">programlama dili</span>
+                        </div>
+                    </div>
 
-    <section id="projeler" class="section reveal">
-        <h2 class="section-title lang-text" data-key="projeler_baslik">Projelerim</h2>
-        <div class="projects-grid detailed-grid">
-            <div class="project-card detailed">
-                <div class="project-img-container">
-                    <img src="https://via.placeholder.com/400x200" alt="Proje 1 Resmi" class="project-img">
-                </div>
-                <div class="project-content">
-                    <h3 class="lang-text" data-key="proje1_baslik">Zafiyet Tarama Aracı</h3>
-                    <p class="lang-text" data-key="proje1_metin">Ağ üzerindeki temel güvenlik açıklarını tespit eden, Python tabanlı hafif bir tarama otomasyon aracı.</p>
-                    <div class="tags project-tags"><span>Python</span><span>Nmap</span><span>Cyber Security</span></div>
-                    <div class="project-links">
-                        <a href="#" target="_blank" class="btn secondary-btn small-btn lang-text" data-key="btn_github"><i class="fab fa-github"></i> Kaynak Kod</a>
+                    <div class="chips">
+                        <span class="chip chip-accent"><i class="fas fa-shield-halved"></i> <span class="lang-text" data-key="alan_siber">Siber Güvenlik</span></span>
+                        <span class="chip chip-accent"><i class="fas fa-brain"></i> <span class="lang-text" data-key="alan_ml">Makine Öğrenmesi</span></span>
+                        <span class="chip chip-accent"><i class="fas fa-eye"></i> <span class="lang-text" data-key="alan_goruntu">Görüntü İşleme</span></span>
+                        <span class="chip chip-accent"><i class="fas fa-code"></i> <span class="lang-text" data-key="alan_web">Web Geliştirme</span></span>
                     </div>
                 </div>
             </div>
-            
-            <div class="project-card detailed">
-                <div class="project-img-container">
-                    <img src="https://via.placeholder.com/400x200" alt="Proje 2 Resmi" class="project-img">
+        </section>
+
+        <!-- =================== EĞİTİM & AKTİVİTELER =================== -->
+        <section id="egitim" class="section container reveal">
+            <div class="section-head">
+                <span class="eyebrow mono">02</span>
+                <h2 class="section-title lang-text" data-key="egitim_baslik">Eğitim & Aktiviteler</h2>
+            </div>
+
+            <div class="edu-grid">
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <div class="card timeline-card">
+                            <div class="timeline-top">
+                                <h3 class="lang-text" data-key="uni_isim">Samsun Üniversitesi</h3>
+                                <span class="date mono lang-text" data-key="uni_tarih">2022 – Devam ediyor</span>
+                            </div>
+                            <p class="muted lang-text" data-key="uni_bolum">Yazılım Mühendisliği · Lisans, 3. sınıf</p>
+                            <div class="chips small">
+                                <span class="chip lang-text" data-key="ders_1">Algoritmalar ve Veri Yapıları</span>
+                                <span class="chip lang-text" data-key="ders_2">Nesne Yönelimli Programlama</span>
+                                <span class="chip lang-text" data-key="ders_3">Yazılım Tasarımı ve Modelleme</span>
+                                <span class="chip lang-text" data-key="ders_4">Sayısal Görüntü İşleme</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <div class="card timeline-card">
+                            <div class="timeline-top">
+                                <h3 class="lang-text" data-key="lise_isim">Bahçelievler Anadolu Lisesi</h3>
+                                <span class="date mono">2018 – 2022</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-                <div class="project-content">
-                    <h3 class="lang-text" data-key="proje2_baslik">Görüntü İşleme ile Nesne Takibi</h3>
-                    <p class="lang-text" data-key="proje2_metin">Kamera üzerinden gerçek zamanlı renk ve nesne tespiti yaparak koordinat takibi sağlayan yazılım.</p>
-                    <div class="tags project-tags"><span>C++</span><span>OpenCV</span><span>OOP</span></div>
-                    <div class="project-links">
-                        <a href="#" target="_blank" class="btn secondary-btn small-btn lang-text" data-key="btn_github"><i class="fab fa-github"></i> Kaynak Kod</a>
+
+                <div class="side-cards">
+                    <div class="card">
+                        <h3 class="card-title"><i class="fas fa-users"></i> <span class="lang-text" data-key="kulup_baslik">Kulüpler</span></h3>
+                        <ul class="plain-list">
+                            <li>
+                                <span class="lang-text" data-key="kulup_siber">SAMÜ Siber Güvenlik Kulübü</span>
+                                <span class="date mono lang-text" data-key="kulup_siber_tarih">2026 – Devam ediyor</span>
+                            </li>
+                            <li>
+                                <span class="lang-text" data-key="kulup_muzik">SAMÜ Müzik Kulübü</span>
+                                <span class="date mono">2025 – 2026</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title"><i class="fas fa-language"></i> <span class="lang-text" data-key="diller_baslik">Diller</span></h3>
+                        <ul class="plain-list">
+                            <li><span class="lang-text" data-key="dil_tr">Türkçe</span><span class="date mono lang-text" data-key="dil_tr_seviye">Ana dil</span></li>
+                            <li><span class="lang-text" data-key="dil_en">İngilizce</span><span class="date mono">B1</span></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="iletisim" class="section reveal">
-        <h2 class="section-title lang-text" data-key="iletisim_baslik">Bana Ulaşın</h2>
-        <div class="contact-container">
-            <form action="https://formspree.io/f/mvzebbbw" method="POST" class="contact-form">
-                <div class="form-group">
-                    <input type="text" name="name" required placeholder="İsim Soyisim" class="lang-placeholder" data-key="form_isim">
+        <!-- =================== YETENEKLER =================== -->
+        <section id="yetenekler" class="section container reveal">
+            <div class="section-head">
+                <span class="eyebrow mono">03</span>
+                <h2 class="section-title lang-text" data-key="yetenekler_baslik">Teknik Beceriler</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="card skill-card">
+                    <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+                    <h3 class="lang-text" data-key="yetenek_programlama">Programlama</h3>
+                    <div class="chips">
+                        <span class="chip">Python</span><span class="chip">C</span><span class="chip">C#</span><span class="chip">C++</span>
+                        <span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">HTML/CSS</span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" name="email" required placeholder="E-posta Adresiniz" class="lang-placeholder" data-key="form_eposta">
+
+                <div class="card skill-card">
+                    <div class="skill-icon"><i class="fas fa-toolbox"></i></div>
+                    <h3 class="lang-text" data-key="yetenek_arac">Kütüphane & Araçlar</h3>
+                    <div class="chips">
+                        <span class="chip">Git & GitHub</span><span class="chip">Flask</span><span class="chip">OpenCV</span>
+                        <span class="chip">EasyOCR</span><span class="chip">Roboflow</span><span class="chip">Tkinter</span>
+                        <span class="chip">Qt Designer</span><span class="chip">REST API</span><span class="chip">VS Code</span>
+                    </div>
                 </div>
-                <div class="form-group">
+
+                <div class="card skill-card">
+                    <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3 class="lang-text" data-key="yetenek_alan">Alanlar</h3>
+                    <div class="chips">
+                        <span class="chip lang-text" data-key="alan_siber">Siber Güvenlik</span>
+                        <span class="chip lang-text" data-key="alan_ml">Makine Öğrenmesi</span>
+                        <span class="chip lang-text" data-key="alan_goruntu">Görüntü İşleme</span>
+                        <span class="chip lang-text" data-key="alan_web">Web Geliştirme</span>
+                        <span class="chip">OOP</span>
+                        <span class="chip lang-text" data-key="alan_veri">Veri Yapıları</span>
+                    </div>
+                </div>
+
+                <div class="card skill-card">
+                    <div class="skill-icon"><i class="fas fa-handshake"></i></div>
+                    <h3 class="lang-text" data-key="yetenek_yetkinlik">Yetkinlikler</h3>
+                    <div class="chips">
+                        <span class="chip lang-text" data-key="yetkinlik_1">Ekip çalışması</span>
+                        <span class="chip lang-text" data-key="yetkinlik_2">İletişim</span>
+                        <span class="chip lang-text" data-key="yetkinlik_3">Analitik düşünme</span>
+                        <span class="chip lang-text" data-key="yetkinlik_4">Hızlı öğrenme</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== PROJELER =================== -->
+        <section id="projeler" class="section container reveal">
+            <div class="section-head">
+                <span class="eyebrow mono">04</span>
+                <h2 class="section-title lang-text" data-key="projeler_baslik">Öne Çıkan Projeler</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Yanında -->
+                <article class="card project-card">
+                    <div class="project-banner banner-rose"><i class="fas fa-hand-holding-heart"></i></div>
+                    <div class="project-body">
+                        <div class="project-head">
+                            <h3 class="lang-text" data-key="p_yaninda_baslik">Yanında</h3>
+                            <span class="label mono">YZM301</span>
+                        </div>
+                        <p class="project-sub lang-text" data-key="p_yaninda_alt">Yaşlılar için yapay zekâ destekli bakım ve güvenlik</p>
+                        <ul class="bullets">
+                            <li class="lang-text" data-key="p_yaninda_1">Telefon dolandırıcılığına karşı Türkçe kalıplarla açıklanabilir risk puanı üreten dolandırıcılık kalkanı.</li>
+                            <li class="lang-text" data-key="p_yaninda_2">Canlı deprem verisiyle 200 km içindeki depremde ebeveyne "İyi misiniz?" soran deprem modu.</li>
+                            <li class="lang-text" data-key="p_yaninda_3">Türkçe sesli asistan ve aile paneli.</li>
+                        </ul>
+                        <div class="chips small"><span class="chip">JavaScript</span><span class="chip lang-text" data-key="tag_yz">Yapay Zekâ</span><span class="chip lang-text" data-key="tag_guvenlik">Güvenlik</span></div>
+                        <a href="https://github.com/gorkemedizozpekmezci-del/yaninda" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> <span class="lang-text" data-key="btn_kod">Kaynak kod</span></a>
+                    </div>
+                </article>
+
+                <!-- Ekran Çeviri Asistanı -->
+                <article class="card project-card">
+                    <div class="project-banner banner-violet"><i class="fas fa-language"></i></div>
+                    <div class="project-body">
+                        <div class="project-head">
+                            <h3 class="lang-text" data-key="p_ceviri_baslik">Ekran Çeviri Asistanı</h3>
+                            <span class="label mono">Python</span>
+                        </div>
+                        <p class="project-sub lang-text" data-key="p_ceviri_alt">Ekrandaki metni OCR ile okuyup anlık çeviren masaüstü aracı</p>
+                        <ul class="bullets">
+                            <li class="lang-text" data-key="p_ceviri_1">Oyunlar ve yabancı dildeki uygulamalar için seçilen ekran bölgesini okur, çevirir ve sesli okur.</li>
+                            <li class="lang-text" data-key="p_ceviri_2">3 katmanlı çeviri motoru: internetsiz çalışan NLLB-200, Gemini AI ve hızlı yedek motor.</li>
+                            <li class="lang-text" data-key="p_ceviri_3">F8–F11 global kısayolları.</li>
+                        </ul>
+                        <div class="chips small"><span class="chip">EasyOCR</span><span class="chip">OpenCV</span><span class="chip">Tkinter</span><span class="chip">NLLB-200</span></div>
+                        <a href="https://github.com/gorkemedizozpekmezci-del/ceviri_asistani" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> <span class="lang-text" data-key="btn_kod">Kaynak kod</span></a>
+                    </div>
+                </article>
+
+                <!-- Phishing Tespiti -->
+                <article class="card project-card">
+                    <div class="project-banner banner-cyan"><i class="fas fa-user-secret"></i></div>
+                    <div class="project-body">
+                        <div class="project-head">
+                            <h3 class="lang-text" data-key="p_phishing_baslik">Kimlik Avı (Phishing) Sitelerinin Tespiti</h3>
+                            <span class="label mono lang-text" data-key="p_phishing_etiket">Araştırma · 2025</span>
+                        </div>
+                        <p class="project-sub lang-text" data-key="p_phishing_alt">Yapay zekâ ile zararlı URL sınıflandırma</p>
+                        <ul class="bullets">
+                            <li class="lang-text" data-key="p_phishing_1">UCI, PhishTank ve Kaggle veri setleriyle veri ön işleme ve özellik çıkarımı.</li>
+                            <li class="lang-text" data-key="p_phishing_2">Decision Tree ve Logistic Regression modelleri; doğruluk, precision ve recall ile değerlendirme.</li>
+                            <li class="lang-text" data-key="p_phishing_3">Kullanıcının URL analiz edebildiği Flask tabanlı prototip arayüz.</li>
+                        </ul>
+                        <div class="chips small"><span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">Flask</span><span class="chip lang-text" data-key="alan_siber">Siber Güvenlik</span></div>
+                    </div>
+                </article>
+
+                <!-- Lumocity -->
+                <article class="card project-card">
+                    <div class="project-banner banner-amber"><i class="fas fa-brain"></i></div>
+                    <div class="project-body">
+                        <div class="project-head">
+                            <h3 class="lang-text" data-key="p_lumocity_baslik">Lumocity</h3>
+                            <span class="label mono">Web</span>
+                        </div>
+                        <p class="project-sub lang-text" data-key="p_lumocity_alt">Beyin antrenmanı sitesi</p>
+                        <ul class="bullets">
+                            <li class="lang-text" data-key="p_lumocity_1">Lumosity'den esinlenen 29 beyin oyunu.</li>
+                            <li class="lang-text" data-key="p_lumocity_2">Beyin haritası ve üyelik/profil sistemi.</li>
+                            <li class="lang-text" data-key="p_lumocity_3">Saf HTML/CSS/JS, kurulum gerektirmez.</li>
+                        </ul>
+                        <div class="chips small"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
+                        <a href="https://github.com/gorkemedizozpekmezci-del/lumocity" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> <span class="lang-text" data-key="btn_kod">Kaynak kod</span></a>
+                    </div>
+                </article>
+            </div>
+
+            <h3 class="sub-title lang-text" data-key="diger_baslik">Diğer Projeler</h3>
+            <div class="mini-grid">
+                <a class="card mini-card" href="https://github.com/gorkemedizozpekmezci-del/anova-power-cli" target="_blank" rel="noopener">
+                    <div class="mini-top"><i class="fas fa-microchip"></i><i class="fab fa-github mini-gh"></i></div>
+                    <h4>anova-power-cli</h4>
+                    <p class="lang-text" data-key="p_anova">G*Power ANOVA motorunun Ghidra ile tersine mühendislik yapılarak sıfırdan yazılmış CLI ve MCP sunucusu.</p>
+                </a>
+                <a class="card mini-card" href="https://github.com/gorkemedizozpekmezci-del/se-primer" target="_blank" rel="noopener">
+                    <div class="mini-top"><i class="fas fa-book-open"></i><i class="fab fa-github mini-gh"></i></div>
+                    <h4>SE Primer</h4>
+                    <p class="lang-text" data-key="p_seprimer">Sokratik yapay zekâ eğitmenli interaktif yazılım mühendisliği kitabı; Cypress ile test edildi.</p>
+                </a>
+                <div class="card mini-card">
+                    <div class="mini-top"><i class="fas fa-tree"></i></div>
+                    <h4 class="lang-text" data-key="p_kacak_baslik">Kaçak Yapı Tespiti</h4>
+                    <p class="lang-text" data-key="p_kacak">Python, OpenCV ve Roboflow ile ormanlık alanlarda kaçak yapıları tespit eden görüntü işleme sistemi.</p>
+                </div>
+                <a class="card mini-card" href="https://github.com/gorkemedizozpekmezci-del/Oyun_Pazari" target="_blank" rel="noopener">
+                    <div class="mini-top"><i class="fas fa-gamepad"></i><i class="fab fa-github mini-gh"></i></div>
+                    <h4 class="lang-text" data-key="p_oyun_baslik">Oyun Pazarı</h4>
+                    <p class="lang-text" data-key="p_oyun">Python ve SQL ile oyunlar için sanal para satın alma sistemi (Programlama-2).</p>
+                </a>
+                <div class="card mini-card">
+                    <div class="mini-top"><i class="fas fa-user-graduate"></i></div>
+                    <h4>SchoolAPI</h4>
+                    <p class="lang-text" data-key="p_school">API ile öğrenci kaydı tutan ve sınav başarı sıralaması çıkaran öğrenci bilgi sistemi (OOP).</p>
+                </div>
+                <div class="card mini-card">
+                    <div class="mini-top"><i class="fas fa-diagram-project"></i></div>
+                    <h4>Project Information System</h4>
+                    <p class="lang-text" data-key="p_pis">Projeleri kaydeden, bütçe atayan ve silen API tabanlı proje bilgi sistemi (Yazılım Tasarımı).</p>
+                </div>
+            </div>
+
+            <div class="center">
+                <a href="https://github.com/gorkemedizozpekmezci-del" target="_blank" rel="noopener" class="btn btn-ghost">
+                    <i class="fab fa-github"></i> <span class="lang-text" data-key="btn_tum_projeler">Tüm projeler GitHub'da</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- =================== İLETİŞİM =================== -->
+        <section id="iletisim" class="section container reveal">
+            <div class="section-head">
+                <span class="eyebrow mono">05</span>
+                <h2 class="section-title lang-text" data-key="iletisim_baslik">İletişim</h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p class="lead lang-text" data-key="iletisim_metin">Staj, ekip projesi ya da sadece tanışmak için yazabilirsiniz. En kısa sürede dönüş yaparım.</p>
+
+                    <a class="contact-row" href="mailto:gorkemedizozpekmezci@gmail.com">
+                        <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                        <span><small class="lang-text" data-key="iletisim_eposta">E-posta</small>gorkemedizozpekmezci@gmail.com</span>
+                    </a>
+                    <a class="contact-row" href="https://www.linkedin.com/in/g%C3%B6rkem-ediz-%C3%B6zpekmezci-748335357/" target="_blank" rel="noopener">
+                        <span class="contact-icon"><i class="fab fa-linkedin-in"></i></span>
+                        <span><small>LinkedIn</small>görkem-ediz-özpekmezci</span>
+                    </a>
+                    <a class="contact-row" href="https://github.com/gorkemedizozpekmezci-del" target="_blank" rel="noopener">
+                        <span class="contact-icon"><i class="fab fa-github"></i></span>
+                        <span><small>GitHub</small>gorkemedizozpekmezci-del</span>
+                    </a>
+                </div>
+
+                <form action="https://formspree.io/f/mvzebbbw" method="POST" class="card contact-form">
+                    <div class="form-row">
+                        <input type="text" name="name" required placeholder="İsim Soyisim" class="lang-placeholder" data-key="form_isim" autocomplete="name">
+                        <input type="email" name="email" required placeholder="E-posta adresiniz" class="lang-placeholder" data-key="form_eposta" autocomplete="email">
+                    </div>
                     <input type="text" name="subject" required placeholder="Konu" class="lang-placeholder" data-key="form_konu">
-                </div>
-                <div class="form-group">
                     <textarea name="message" rows="5" required placeholder="Mesajınız..." class="lang-placeholder" data-key="form_mesaj"></textarea>
-                </div>
-                <button type="submit" class="submit-btn lang-text" data-key="form_gonder">Mesaj Gönder</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- YENİ: YUKARI ÇIK BUTONU -->
-    <button id="scrollTopBtn" class="scroll-top-btn" title="Yukarı Çık">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <div id="cv-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-cv-btn">&times;</span>
-            <h2 class="lang-text" data-key="modal_cv_baslik" style="color: var(--primary); text-align: center; margin-bottom: 10px;">Özgeçmişim</h2>
-            <div class="modal-actions" style="margin-bottom: 20px;">
-                <a href="cv.pdf" class="btn primary-btn lang-text" data-key="modal_indir_buton" download>Dosyayı İndir</a>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <span class="lang-text" data-key="form_gonder">Mesaj Gönder</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
             </div>
-            <iframe src="cv.pdf" width="100%" height="500px" style="border: 1px solid var(--border); border-radius: 10px;"></iframe>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <footer>
-        <div class="social-icons">
-            <a href="https://github.com/gorkemedizozpekmezci-del" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/g%C3%B6rkem-ediz-%C3%B6zpekmezci-748335357/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <!-- =================== FOOTER =================== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Görkem Ediz Özpekmezci</p>
+            <div class="social-icons">
+                <a href="https://github.com/gorkemedizozpekmezci-del" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/g%C3%B6rkem-ediz-%C3%B6zpekmezci-748335357/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:gorkemedizozpekmezci@gmail.com" aria-label="E-posta"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </footer>
+
+    <!-- YUKARI ÇIK BUTONU -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Yukarı çık"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- CV ÖNİZLEME PENCERESİ -->
+    <div id="cv-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title">
+        <div class="modal-content">
+            <div class="modal-head">
+                <h2 id="cv-modal-title" class="lang-text" data-key="modal_cv_baslik">Özgeçmişim</h2>
+                <div class="modal-actions">
+                    <a href="cv.pdf" class="btn btn-primary btn-sm" download>
+                        <i class="fas fa-download"></i> <span class="lang-text" data-key="modal_indir_buton">İndir</span>
+                    </a>
+                    <button class="icon-btn close-cv-btn" aria-label="Kapat"><i class="fas fa-xmark"></i></button>
+                </div>
+            </div>
+            <iframe src="cv.pdf" title="Özgeçmiş"></iframe>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
