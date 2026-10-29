@@ -99,21 +99,25 @@ const sozluk = {
     },
     p_ceviri_3: { tr: "F8–F11 global kısayolları.", en: "F8–F11 global hotkeys." },
 
-    p_phishing_baslik: { tr: "Kimlik Avı (Phishing) Sitelerinin Tespiti", en: "Phishing Website Detection" },
-    p_phishing_etiket: { tr: "Araştırma · 2025", en: "Research · 2025" },
-    p_phishing_alt: { tr: "Yapay zekâ ile zararlı URL sınıflandırma", en: "Malicious URL classification with AI" },
-    p_phishing_1: {
-        tr: "UCI, PhishTank ve Kaggle veri setleriyle veri ön işleme ve özellik çıkarımı.",
-        en: "Data preprocessing and feature extraction on UCI, PhishTank and Kaggle datasets."
+    p_kavira_baslik: { tr: "Kavira Mobilya", en: "Kavira Mobilya" },
+    p_kavira_etiket: { tr: "Canlı ürün", en: "Live product" },
+    p_kavira_alt: { tr: "Mobilya atölyeleri için maliyet hesaplama ve kesim planı yazılımı", en: "Costing and cutting-plan software for furniture workshops" },
+    p_kavira_1: {
+        tr: "Ölçüleri girilen 41 farklı model (dolap, yatak, koltuk, masa...) parçalara ayrılır; maliyet kalem kalem hesaplanır.",
+        en: "41 models (wardrobes, beds, sofas, tables...) are broken into parts from the entered dimensions, with an itemized cost breakdown."
     },
-    p_phishing_2: {
-        tr: "Decision Tree ve Logistic Regression modelleri; doğruluk, precision ve recall ile değerlendirme.",
-        en: "Decision Tree and Logistic Regression models, evaluated with accuracy, precision and recall."
+    p_kavira_2: {
+        tr: "Parçalar gerçek plaka ölçüsüne yerleştirilir; kesim planı, fire hesabı ve aksesuar listesi otomatik çıkar, daha az plakayla üretim için öneriler sunulur.",
+        en: "Parts are nested onto real sheet sizes; cutting plans, waste and hardware lists are generated automatically, with suggestions to use fewer sheets."
     },
-    p_phishing_3: {
-        tr: "Kullanıcının URL analiz edebildiği Flask tabanlı prototip arayüz.",
-        en: "Flask-based prototype interface where users can analyze a URL."
+    p_kavira_3: {
+        tr: "3D önizleme, iç bölme editörü ve müşteriye gönderilebilen teklif çıktısı.",
+        en: "3D preview, interior layout editor and customer-ready quotes."
     },
+    tag_maliyet: { tr: "Maliyet hesabı", en: "Cost calculation" },
+    tag_kesim: { tr: "Kesim optimizasyonu", en: "Cut optimization" },
+    tag_3d: { tr: "3D önizleme", en: "3D preview" },
+    btn_site: { tr: "Siteyi ziyaret et", en: "Visit website" },
 
     p_lumocity_baslik: { tr: "Lumocity", en: "Lumocity" },
     p_lumocity_alt: { tr: "Beyin antrenmanı sitesi", en: "Brain training website" },
